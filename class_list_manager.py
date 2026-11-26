@@ -24,6 +24,13 @@ def longest_name(names):
 # Written by: Tuleen Alnaim (task 6)
 def to_upper(names):
     return [name.upper() for name in names]
+# Written by: Tuleen Alnaim (task 8)
+def remove_duplicates(names):
+    unique_names = []
+    for name in names:
+        if name not in unique_names:
+            unique_names.append(name)
+    return unique_names
 def main():
     print("Welcome to the Class List Manager!")
     print("Class list:", names)
@@ -32,6 +39,7 @@ def main():
     print("Sorted names:", sort_names(names))
     print("Longest name:", longest_name(names))
     print("Uppercase names:", to_upper(names))
+    print("Names without duplicates:", remove_duplicates(names))
 # Each student calls her function here, for example:
 # print("Number of names:", count_names(names))
 main()
