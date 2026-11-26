@@ -21,6 +21,9 @@ def longest_name(names):
         if len(name) > len(longest):
             longest = name
     return longest
+# Written by: Tuleen Alnaim (task 6)
+def to_upper(names):
+    return [name.upper() for name in names]
 def main():
     print("Welcome to the Class List Manager!")
     print("Class list:", names)
@@ -28,6 +31,7 @@ def main():
     print("Search result:", search_name(names, "Sara"))
     print("Sorted names:", sort_names(names))
     print("Longest name:", longest_name(names))
+    print("Uppercase names:", to_upper(names))
 # Each student calls her function here, for example:
 # print("Number of names:", count_names(names))
 main()
