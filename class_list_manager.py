@@ -11,11 +11,24 @@ def search_name(names, name):
         if student == name:
             return True
     return False
+# Written by: Haifa (task 3)
+def sort_names(names):
+    return sorted(names)
+# Written by: Haifa (task 4)
+def longest_name(names):
+    longest = names[0]
+    for name in names:
+        if len(name) > len(longest):
+            longest = name
+    return longest
 def main():
-print("Welcome to the Class List Manager!")
-print("Class list:", names)
-print("Number of names:", count_names(names))
+    print("Welcome to the Class List Manager!")
+    print("Class list:", names)
+    print("Number of names:", count_names(names))
     print("Search result:", search_name(names, "Sara"))
+    print("Sorted names:", sort_names(names))
+    print("Longest name:", longest_name(names))
 # Each student calls her function here, for example:
 # print("Number of names:", count_names(names))
 main()
+
