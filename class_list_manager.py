@@ -21,9 +21,23 @@ def longest_name(names):
         if len(name) > len(longest):
             longest = name
     return longest
+# Written by: Sarah Alkanhal (task 5)
+def names_starting_with(names, letter):
+    result = []
+    for name in names:
+        if name.lower().startswith(letter.lower()):
+            result.append(name)
+    return result
 # Written by: Tuleen Alnaim (task 6)
 def to_upper(names):
     return [name.upper() for name in names]
+# Written by: Sarah Alkanhal (task 7)
+def count_vowels(name):
+    count = 0
+    for letter in name:
+        if letter.lower() in "aeiou":
+            count += 1
+    return count
 # Written by: Tuleen Alnaim (task 8)
 def remove_duplicates(names):
     unique_names = []
@@ -40,6 +54,8 @@ def main():
     print("Longest name:", longest_name(names))
     print("Uppercase names:", to_upper(names))
     print("Names without duplicates:", remove_duplicates(names))
+    print("Names starting with S:", names_starting_with(names, "S"))
+    print("Number of vowels in Sara:", count_vowels("Sara"))
 # Each student calls her function here, for example:
 # print("Number of names:", count_names(names))
 main()
